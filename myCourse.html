@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopOne Training School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            font-size: 13px !important;
+        }
+
+        /* logo size for logo */
+        @media (max-width: 767px) {
+            .logo {
+                width: 100px !important;               
+                margin-left: 10px;
+            }
+        }
+
+        /* top carousel mobile view */
+        @media (max-width: 768px) {
+            .carousel-item img {
+            height: 50vh;
+            object-fit: cover; 
+        }    
+            .carousel-caption {
+                top: 35%;
+            }                               
+        }
+
+        /* Carousel arrow img change */
+        .carousel-control-prev-icon{
+            background-image: url('images/arrow.png') !important;
+        }
+        .carousel-control-next-icon{
+            background-image: url('images/arrow1.png') !important;
+        }
+        .carousel-control-prev-customtop,.carousel-control-next-customtop{
+            width: 25% !important;
+        }
+        .carousel-control-prev-custom,.carousel-control-next-custom{
+            width: 5% !important;
+        }
+
+        /*  disable link */
+        .disabled-link {
+        pointer-events: none;  /* Prevents clicking */
+        color: #6c757d;        /* Bootstrap's text-muted color */
+        text-decoration: none; /* Removes the underline */
+    }
+        
+    </style>
+</head>
+
+<body> 
+    <!-- Start Nav-->
+    <header id="header" class="headerShadow d-flex sticky-top">
+        <div class="container container-xl position-relative mb-1">
+          <div class="row">
+            <!-- logo Start -->
+            <div class="col-lg-4 col-md-6 col-4 text-center pt-3 pt-md-2">
+                <a href="index.html" class="">
+                    <img src="images/logo.jpg" class="img-fluid logo w-25" alt="...">
+                </a> 
+                <h5 class="titleColor ms-3 d-none d-sm-none d-md-inline">TopOne Training School</h5>            
+            </div>     
+
+            <!-- TopNav Start-->
+            <div class="col-lg-6 d-none d-lg-block">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary float-end">
+                    <div class="container-fluid">                      
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="course.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Course
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="course.html">Basic</a></li>
+                              <li><a class="dropdown-item" href="course.html">Intermediate</a></li>
+                              <li><a class="dropdown-item" href="course.html">Advanced</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-user titleColor pe-1"></i>EI EI
+                            </a>                                        
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>                
+                            </ul>
+                        </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-address-card titleColor ms-2"></i> Register
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>    
+            </div>         
+
+            <!-- Start humberger menu -->            
+            <div class="col-lg-2 col-md-2 col-6 ms-auto order-2 order-lg-4">
+                <nav class="navbar bg-body-tertiary float-end">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="course.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Courses
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="course.html">Basic</a></li>
+                                            <li><a class="dropdown-item" href="course.html">Intermediate</a></li>
+                                            <li><a class="dropdown-item" href="course.html">Advanced</a></li>                      
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-user titleColor pe-1"></i>Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-address-card titleColor pe-1"></i>Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+             <!-- Logo icon in mobile view -->
+            <div class="col-2 d-lg-none d-md-block order-3">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user titleColor pe-1"></i>EI EI
+                    </a>                                        
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                        <li><a class="dropdown-item" href="#">Logout</a></li>                
+                    </ul>
+                </li>
+            </div>
+
+          </div> 
+        </div>           
+    </header>
+    <!-- End nav -->   
+
+<!-- Start Main Section here We will change the code --> 
+    <div class="container my-5">  
+        <h4 class="titleColor mb-4">My Course Detail</h4>      
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-4">               
+                <div id="sidebar">
+                    <div class="card sidebar_card py-2 px-4">
+                        <div class="my-3">
+                            <h6 class="titleColor">Basic Starter</h6>                            
+                            <p class="text-primary mt-3">
+                                <span class="fw-bold">Category: Basic </span>
+                                <span class="float-end"><i class="fa-solid fa-clock titleColor pe-1"></i> 1hr 30min</span>
+                            </p>
+                            <p class="text-primary">
+                                <span class=""><i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                <span class="float-end"><i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 2</span>
+                            </p> 
+                            <hr>
+                            <p class="">ke a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, </p>  
+                            <hr>
+                        </div>                                                      
+                        <div class="card-body p-0">
+                            <div class="accordion accordion-flush" id="courseAccordian">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="chapter_1">
+                                        <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#chapter1" aria-expanded="true" aria-controls="chapter1">
+                                        <h6 class="titleColor">Chapter 1 - Listening</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="chapter1" class="accordion-collapse collapse show" aria-labelledby="chapter_1" data-bs-parent="#courseAccordian">
+                                        <div class="accordion-body p-0">
+                                            <table class="table table-hover mb-0">
+                                                <tr class="lesson-list">
+                                                    <td class="px-md-4">
+                                                        <a href="https://www.youtube.com/embed/PVTztMQsod8" class="text-dark ms-2">Lesson 1 - Basic Introductions</a>
+                                                    </td>
+                                                </tr>
+                                                <tr class="lesson-list">
+                                                    <td class="px-md-4"> 
+                                                        <a href="#" class="disabled text-dark ms-2 disabled-link">Lesson 2 - Listening for beginner</a>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>                                                                
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="chapter_2">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter2" aria-expanded="true" aria-controls="chapter2">
+                                        <h6 class="titleColor">Chapter 2 - Speaking</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="chapter2" class="accordion-collapse collapse " aria-labelledby="chapter_2" data-bs-parent="#courseAccordian">
+                                        <div class="accordion-body p-0">
+                                        <table class="table table-hover mb-0">
+                                            <tr class="lesson-list">
+                                                <td class="px-md-4">
+                                                    <a href="#" class="text-dark ms-2 disabled-link">Lesson 1 - Introduction to speaking</a>
+                                                </td>
+                                            </tr>
+                                            <tr class="lesson-list">
+                                                <td class="px-md-4">
+                                                    <a href="#" class="text-dark ms-2 disabled-link"> Lesson 2 - Basic Speaking</a>
+                                                </td>
+                                            </tr>                                             
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="chapter_3">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter3" aria-expanded="true" aria-controls="chapter3">
+                                        <h6 class="titleColor">Chapter 2 - Writing</h6>
+                                        </button>
+                                    </h2>
+                                    <div id="chapter3" class="accordion-collapse collapse " aria-labelledby="chapter_3" data-bs-parent="#courseAccordian">
+                                        <div class="accordion-body p-0">
+                                        <table class="table table-hover mb-0">
+                                            <tr class="lesson-list">
+                                                <td class="px-md-4">
+                                                    <a href="#" class="text-dark ms-2 disabled-link">Lesson1 - Introduction to writing </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="lesson-list">
+                                                <td class="px-md-4">
+                                                    <a href="#" class="text-dark ms-2 disabled-link"></a>Lesson 2 - Essay Writing</a>
+                                                </td>
+                                            </tr> 
+                                        </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                    </div>
+                </div>   
+            </div>
+            <div class="col-12 col-sm-12 col-md-8 py-4 px-4 bg-body-secondary">
+                <h4 class="titleColor">Lesson 1 -  Basic Introductions</h4>
+                <div class="embed-responsive embed-responsive-16by9 my-4">                    
+                    <iframe src="https://www.youtube.com/embed/PVTztMQsod8" title="Learn English Online - Lesson 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-100" style="height: 340px;"></iframe>
+                </div>
+                <div class="my-2">
+                    <h4 class="titleColor">Description</h4>
+                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita laborum provident deleniti nisi dolorem nemo assumenda earum dolore? </span>
+                    <span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam vitae laboriosam nesciunt non vel illo.</span>
+
+                </div>
+                <div class="my-4">
+                    <button class="btn btn-primary float-end mr-5 px-4">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- End Main section -->
+
+    <!-- Start footer -->
+    <div class="container-fluid bg-body-secondary px-4 px-md-5 pt-3 text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col mb-3"> 
+                <span class="d-block d-lg-inline me-3"><i class="fa-solid fa-phone pe-2 titleColor"></i>09973791484</span>
+                <span class="d-block d-lg-inline"><i class="fa-solid fa-envelope pe-2 titleColor"></i>topone@gmail.com</span>            
+            </div>      
+            <div class="col mb-3">
+                <span class="text-center d-block d-md-inline">Copy right @2023-2024 by <span class="titleColor fw-bold">TopOne Language School</span>. </span>          
+            </div>
+            <div class="col mb-3 titleColor">
+                <i class="fa-brands fa-square-facebook fa-xl me-3 ps-2"></i>
+                <i class="fa-brands fa-facebook-messenger fa-xl me-3"></i>
+                <i class="fa-brands fa-square-twitter fa-xl me-3"></i>
+                <i class="fa-brands fa-youtube fa-xl me-3"></i>
+                <i class="fa-brands fa-tiktok fa-xl me-3"></i>
+            </div>   
+        </div>
+    </div>
+    <!-- End Footer -->
+
+<!-- Start JS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="fontawesome/js/all.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Start popular course slide -->
+    <script>
+        $(document).ready(function () {            
+            $(".customer-logos").slick({
+                 slidesToShow: 2,
+                 slidesToScroll: 1,
+                 autoplay: true,
+                 autoplaySpeed: 5000,
+                 arrows: false,
+                 dots: false,
+                 pauseOnHover: false,
+                 responsive: [
+                 { breakpoint: 576, settings: { slidesToShow: 1 } },
+                 { breakpoint: 758, settings: { slidesToShow: 1 } },
+                 { breakpoint: 992, settings: { slidesToShow: 2 } },
+                 { breakpoint: 1200, settings: { slidesToShow: 3 } },
+                 ]
+            });           
+        });
+    </script> 
+</body>
+</html>

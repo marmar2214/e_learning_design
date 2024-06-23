@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* private code open */
+
+.section_color{
+    background-color: #f7f8f9;
+}
+.course_title{
+    color: #0f4391;
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.search_section{
+    max-width: 800px;
+}
+.search_input{
+    max-width: 300px;
+}
+
+.search_btn{
+    color: #0f4391;
+}
+.section_title{
+    color: #01095c;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.cardCol{
+    transition: all 0.3s;
+  }
+  .cardCol:hover{
+    transform:scale(1.05);
+  }
+  .cardText{
+    font-size: smaller;
+  }
+  
+  .cardCategoryText{
+    font-size: smaller;
+  }
+  .course_price{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.9rem;
+    color: #0f4391;
+  }
+
+  
+  .readMoreBtn{
+    color:#f8f9fa;
+    background-color: #0f4391;
+    border:1px, solid, #0f4391;
+    font-size:x-small;
+    border-radius: 3px;
+    font-weight: bold;
+    
+  
+  }
+  .readMoreBtn:hover{
+    background-color:#275daf;
+    border:1px, solid, #275daf;
+    color:#f8f9fa;
+  }
+  .joinBtn{
+    color:#0f4391;
+    background-color: #f8f9fa;
+    border:1px, solid, #0f4391;
+    font-size:x-small;
+    border-radius: 3px;
+    font-weight: bold;
+  }
+  
+  .joinBtn:hover{
+    background-color:#275daf;
+    border:1px, solid, #275daf;
+    color:#f8f9fa;
+  }
+
+  .see_more{
+    margin: 20px auto; 
+    border-radius: 10px;
+    border: 1px solid #0f4391;
+    display: inline-block;
+    color: #0f4391;
+    background-color: #f9f9fa;
+    transition: .3s;
+    /* float: left; */
+  }
+  .see_more:hover {
+    color: #f8f9fa;
+    background-color: #0f4391;
+    border: 1px solid #0f4391;
+    text-decoration: none;
+}
+
+/* Courses(Beginner,Intermediate, Advanced) */
+.courses{
+    background-color: #f7f8f9;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    max-width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    width: 900px;
+}
+.courses h2{
+    letter-spacing: 1px;
+    margin: 15px 5px;
+}
+.course_preview{
+    background-color: #0f4391;
+    color: #fff;
+    padding: 35px;
+    max-width: 300px;
+}
+.course_preview a{
+    color: #f7f8f9;
+    display: inline-block;
+    font-size: 15px;
+    opacity: 0.6;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.course_info{
+    padding: 35px;
+    position: relative;
+    width: 100%;
+}
+.couerse_info_text{
+    font-size: 1.5rem;
+}
+.join_btn{
+    background-color: #0f4391;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    color: #f7f8f9;
+    font-size: 16px;
+    padding: 12px 25px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    letter-spacing: 1px;
+}
+
+.beginner_course{
+    max-width: 50%;
+    margin: 40px auto;
+    text-align: center;
+    .hr {
+        font-size: 20px;
+        position: relative;
+        border: 0;
+        height: 1.5em;
+        &::before{
+            content: '';
+            background: linear-gradient(to right, transparent, transparent);
+            position: absolute;
+          left: 0;
+          top: 50%;
+          width: 100%;
+          height: 1px;
+        }
+        &:after {
+          content: attr(data-content);
+          position: relative;
+          display: inline-block;
+          color: black;
+
+          padding: 0 .5em;
+          line-height: 1.5em;
+          background-color: black;
+        }
+        }
+    }
+    /* .categories_toggles{
+        width: 1000px;
+        margin: auto;
+        display: block;
+        overflow: hidden;
+    } */
+    .categories_toggles button{
+        border: 2px solid #0f4391;
+        border-radius: 40px;
+        color: #0f4391;
+        display: block;
+        padding: 8px;
+        width: 150px;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+   
+
+ 
+
+  
+
+    </style>
+
+</head>
+<body>
+    <div class="container section_color px-5 py-3 mb-5">
+        <div class="row search_section ms-5 ps-5">
+            <div class="col-4 col-sm-12">
+                <h2 class="course_title"> Courses</h2>
+            </div>
+            <div class="col-8 col-sm-12 p-1 bg-light rounded rounded-pill shadow-sm">
+                <div class="input-group">
+                    <input type="search" placeholder="Search Courses?" aria-describedby="button-addon1" class="search_input form-control border-0 bg-light">
+                    <div class="input-group-append">
+                        <button id="button-addon1" type="submit" class="btn btn-link search_btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 mt-5 card-wrapper">
+            <!-- Blog entries-->
+            
+            
+            <div class="col">
+                
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~SPECIALIZATION!~intermediate-grammar/XDP~SPECIALIZATION!~intermediate-grammar.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted"><i class="bi bi-journal me-2"></i>Edition:1 <span class="vr mx-3"></span><span class="small text-muted"><i class="bi bi-file-earmark-text me-2"></i>Module: 10</span></div>
+                        <span class="text-muted cardCategoryText"><i class="bi bi-hdd-stack me-2"></i>Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>                       
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col">
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~english-intermediate-b1-2/XDP~COURSE!~english-intermediate-b1-2.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted">Edition:1 <span class="vr mx-3"></span><span class="small text-muted">Module: 10</span></div>
+                        <span class="text-muted cardCategoryText">Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col">
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~SPECIALIZATION!~intermediate-grammar/XDP~SPECIALIZATION!~intermediate-grammar.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted">Edition:1 <span class="vr mx-3"></span><span class="small text-muted">Module: 10</span></div>
+                        <span class="text-muted cardCategoryText">Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="col">
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~english-intermediate-b1-2/XDP~COURSE!~english-intermediate-b1-2.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted">Edition:1 <span class="vr mx-3"></span><span class="small text-muted">Module: 10</span></div>
+                        <span class="text-muted cardCategoryText">Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="#" class="btn bth-outline see_more btn-md ms-2 px-3">See More</a>
+            </div>  
+        </div>
+    </div>
+    <div class="beginner_course">
+        <hr class="hr-text" data-content="Beginner Course">
+    </div>
+
+    <!-- Beginner Courses -->
+    <div class="container section_color px-5 py-3 mb-5">
+        <div>
+            <h2 class="section_title">Porpular Courses</h2>
+        </div>
+        <div class="row row-cols-1 row-cols-md-4 mt-5 card-wrapper">
+            <!-- Blog entries-->
+            
+            
+            <div class="col">
+                
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~SPECIALIZATION!~intermediate-grammar/XDP~SPECIALIZATION!~intermediate-grammar.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted"><i class="bi bi-journal me-2"></i>Edition:1 <span class="vr mx-3"></span><span class="small text-muted"><i class="bi bi-file-earmark-text me-2"></i>Module: 10</span></div>
+                        <span class="text-muted cardCategoryText"><i class="bi bi-hdd-stack me-2"></i>Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>                       
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col">
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~english-intermediate-b1-2/XDP~COURSE!~english-intermediate-b1-2.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted">Edition:1 <span class="vr mx-3"></span><span class="small text-muted">Module: 10</span></div>
+                        <span class="text-muted cardCategoryText">Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> 
+
+            <div class="col">
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~SPECIALIZATION!~intermediate-grammar/XDP~SPECIALIZATION!~intermediate-grammar.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted">Edition:1 <span class="vr mx-3"></span><span class="small text-muted">Module: 10</span></div>
+                        <span class="text-muted cardCategoryText">Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> 
+            
+            <div class="col">
+                <!-- Featured blog post-->
+                <div class="card mx-2 mb-4 shadow cardCol">
+                    <a href="#!"><img class="card-img-top" src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/XDP/XDP~COURSE!~english-intermediate-b1-2/XDP~COURSE!~english-intermediate-b1-2.jpeg" alt="..." /></a>
+                    <div class="card-body inline">
+                        <div class="card-title fw-bold fs-7">Intermediate Course</div>
+                        <div class="small text-muted">Edition:1 <span class="vr mx-3"></span><span class="small text-muted">Module: 10</span></div>
+                        <span class="text-muted cardCategoryText">Intermediate Level</span>
+                        <p class="cardText mt-2">This course is about English 4 skills related to intermediate level.</p>
+                        <p class="course_price">Fees: 80000 MMK</p>
+                        
+                        <!-- <span class="small ">
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+                            <i class="bi bi-star-fill text-warning small"></i>
+
+                            <i class="bi bi-star-half text-warning small"></i>
+                        </span> -->
+                        <div class="float-end my-2">
+                            <a class="readMoreBtn px-3 py-2 text-decoration-none me-1" href="{{route('front.show',3)}}" >Read more</a>
+                            <a class="joinBtn px-3 py-2 text-decoration-none " href="" >Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="#" class="btn bth-outline see_more btn-md ms-2 px-3">See More</a>
+            </div>  
+        </div>
+    </div>
+    <div class="beginner_course">
+        <hr class="hr-text" data-content="Beginner Course">
+    </div>
+     
+<!-- 
+    <div class="container section_color px-5 py-3 my-5">
+        <div>
+            <h2 class="section_title">Beginner Course</h2>
+        </div>
+        <div class="courses ms-5 mt-5">
+            <div class="course_preview">
+                <h2>Beginner Course</h2>
+                <a href="#">View all Editions <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="course_info">
+                <div class="couerse_info_text small text-muted">
+                    <i class="bi bi-journal me-2"></i>Edition:1 <span class="vr mx-3"></span><span class="small text-muted"><i class="bi bi-file-earmark-text me-2"></i>Module: 10</span>
+                </div>
+                <p class="cardText ms-2 mt-2">This course is about English 4 skills related to Beginner level.</p>
+                        <p class="course_price ms-2 mt-5">Fees: 80000 MMK</p>
+                <button class="join_btn">Join Now</button>
+            </div>
+        </div>
+    </div> -->
+
+    
+
+    
+    
+    
+    
+    <div class="container section_color py-3 my-5">
+        <div>
+            <h2 class="section_title mb-5">Categories</h2>
+        </div>
+        <div class="row row-cols-2 row-cols-lg-3 categories_toggles ms-4">
+            <div class="col-6 col-lg-2">
+                <button>Beginner Course</button>
+            </div>
+            <div class="col-6 col-lg-2">
+                <button>Intermediate Course</button>
+            </div>
+            <div class="col-6 col-lg-2">
+                <button>Advanced Course</button>
+            </div>
+            <div class="col-6 col-lg-2">
+                <button>Beginner Course</button>
+            </div>
+            <div class="col-6 col-lg-2">
+                <button>Intermediate Course</button>
+            </div>
+            <div class="col-6 col-lg-2">
+                <button>Advanced Course</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

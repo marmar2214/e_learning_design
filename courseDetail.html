@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopOne Training School</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Start Home Page CSS */
+        body{
+            font-size: 13px !important;
+        }
+
+        /* logo size for logo */
+        @media (max-width: 767px) {
+            .logo {
+                width: 100px !important;               
+                margin-left: 10px;
+            }
+        }
+
+        /* top carousel mobile view */
+        @media (max-width: 768px) {
+            .carousel-item img {
+            height: 50vh;
+            object-fit: cover; 
+        }    
+            .carousel-caption {
+                top: 35%;
+            }                               
+        }
+
+        /* Carousel arrow img change */
+        .carousel-control-prev-icon{
+            background-image: url('images/arrow.png') !important;
+        }
+        .carousel-control-next-icon{
+            background-image: url('images/arrow1.png') !important;
+        }
+        .carousel-control-prev-customtop,.carousel-control-next-customtop{
+            width: 25% !important;
+        }
+        .carousel-control-prev-custom,.carousel-control-next-custom{
+            width: 5% !important;
+        }
+
+        /*  Start Course Detial Css*/
+        .outline {
+        border: 1px solid gray;
+        border-radius: 10px 0px 10px 0px;
+        overflow: hidden;
+        transition: all 0.8s;
+        }
+
+        .outline:hover {
+        transform: skew(-2deg);
+        }
+
+        .img_scale {
+        width: 100%;
+        background-color: #000;
+        overflow: hidden;
+        }
+
+        .img_scale img {
+        width: 100%;
+        height: 100%;
+        transform: scale(1.10);
+        opacity: 1;
+        transition: all 0.5s;
+        }
+
+        .img_scale img:hover {
+        transform: scale(1.20);
+        opacity: 70%;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Start Nav-->
+    <header id="header" class="headerShadow d-flex sticky-top">
+        <div class="container container-xl position-relative mb-1">
+          <div class="row">
+            <!-- logo Start -->
+            <div class="col-lg-4 col-md-6 col-4 text-center pt-3 pt-md-2">
+                <a href="index.html" class="">
+                    <img src="images/logo.jpg" class="img-fluid logo w-25" alt="...">
+                </a> 
+                <h5 class="titleColor ms-3 d-none d-sm-none d-md-inline">TopOne Training School</h5>            
+            </div>     
+
+            <!-- TopNav Start-->
+            <div class="col-lg-6 d-none d-lg-block">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary float-end">
+                    <div class="container-fluid">                      
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="course.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Course
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="individual_course.html">Basic</a></li>
+                              <li><a class="dropdown-item" href="individual_course.html">Intermediate</a></li>
+                              <li><a class="dropdown-item" href="individual_course.html">Advanced</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <i class="fa-solid fa-user titleColor ms-5"></i> Login
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-address-card titleColor ms-2"></i> Register
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>    
+            </div>         
+
+            <!-- Start humberger menu -->            
+            <div class="col-lg-2 col-md-2 col-6 ms-auto order-2 order-lg-4">
+                <nav class="navbar bg-body-tertiary float-end">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="course.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Courses
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="course.html">Basic</a></li>
+                                            <li><a class="dropdown-item" href="course.html">Intermediate</a></li>
+                                            <li><a class="dropdown-item" href="course.html">Advanced</a></li>                      
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-user titleColor pe-1"></i>Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-address-card titleColor pe-1"></i>Register</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+             <!-- Logo icon in mobile view -->
+            <div class="col-2 d-lg-none d-md-block order-3">
+                <i class="fa-solid fa-user text-primary pt-4"></i>
+            </div>
+
+          </div> 
+        </div>           
+    </header>
+    <!-- End nav -->
+
+<!-- Start Main Section here We will change the code --> 
+    <!-- Start Basic Starter Course -->
+    <div class="container my-5">
+        <h4 class="mb-3 titleColor">Basic Stater Course</h4>  
+        <div class="card py-4 px-5 bg-body-secondary">
+            <div class="row">
+                <div class="col-12 col-md-4 bg-light">
+                    <div class="row text-primary">
+                        <div class="col-12 ps-0 pe-0">
+                            <img src="images/course2.jpg" alt="" class="img-fluid w-100">
+                        </div>
+                        <div class="col-12">
+                            <h6 class="titleColor mt-3">Listening</h6>                                
+                            <p>
+                                <span class="me-3"><i class="fa-solid fa-clock titleColor pe-1"></i> 1hr 30min</span>
+                                <span class="me-3"><i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                <span><i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 2</span>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="col-12">
+                            <h6 class="titleColor mt-3">Writing</h6>                                
+                            <p>
+                                <span class="me-3"><i class="fa-solid fa-clock titleColor pe-1"></i> 1hr 30min</span>
+                                <span class="me-3"><i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                <span><i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 2</span>
+                            </p>
+                            <hr>
+                        </div>
+                        <div class="col-12">
+                            <h6 class="titleColor mt-3">Grammer</h6>                                
+                            <p>
+                                <span class="me-3"><i class="fa-solid fa-clock titleColor pe-1"></i> 1hr 30min</span>
+                                <span class="me-3"><i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                <span><i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 2</span>
+                            </p>
+                        </div>
+                    </div>    
+                </div>
+                <div class="col-12 col-md-8 ps-3">   
+                    <div class="my-3">                    
+                        <h6 class="titleColor">Explain about course</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dolores sit fugit, nobis quis necessitatibus quae hic nequedoloribus liberobus eius earum voluptate aliquam sed. In pariatur ut placeat earum dolorem, quisquam officiavelit reprehenderit sapiente ducimus dolor architecto ipsa impedit provident doloribus libero
+                        </p>
+                        <p>pariatur ut placeat earum dolorem, quisquam officiavelit reprehenderit sapiente ducimus dolor architecto ipsa impedit provident doloribus liberobus eius earum voluptate </p>
+                        <hr>
+                        <h6 class="titleColor">Who should join this course</h6>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint dolores sit fugit, nobis quis necessitatibus quae hic neque dolorem asperiores cum temporibus sapiente repellat iure vero doloribus eius earum voluptate aliquam sed. In pariatur ut placeat earum  
+                        </p>
+                        <p>
+                            pariatur ut placeat earum dolorem, quisquam officiavelit reprehenderit sapiente ducimus dolor architecto ipsa impedit provident doloribus liberobus eius earum voluptate aliquam sed.o
+                        </p>
+                        <a href="" class="btn btn-sm btn-primary px-5 me-3">Enroll</a>
+                        <a href="index.html" class="btn btn-sm btn-outline-primary px-5">Cancel</a>
+                    </div>                    
+                </div>
+            </div>
+        </div>        
+    </div> 
+    <!-- End Basic Starter Course -->  
+
+    
+
+<!-- End Main section -->
+
+    <!-- Start footer -->
+    <div class="container-fluid bg-body-secondary px-4 px-md-5 pt-3 text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col mb-3"> 
+                <span class="d-block d-lg-inline me-3"><i class="fa-solid fa-phone pe-2 titleColor"></i>09973791484</span>
+                <span class="d-block d-lg-inline"><i class="fa-solid fa-envelope pe-2 titleColor"></i>topone@gmail.com</span>            
+            </div>      
+            <div class="col mb-3">
+                <span class="text-center d-block d-md-inline">Copy right @2023-2024 by <span class="titleColor fw-bold">TopOne Language School</span>. </span>          
+            </div>
+            <div class="col mb-3 titleColor">
+                <i class="fa-brands fa-square-facebook fa-xl me-3 ps-2"></i>
+                <i class="fa-brands fa-facebook-messenger fa-xl me-3"></i>
+                <i class="fa-brands fa-square-twitter fa-xl me-3"></i>
+                <i class="fa-brands fa-youtube fa-xl me-3"></i>
+                <i class="fa-brands fa-tiktok fa-xl me-3"></i>
+            </div>   
+        </div>
+    </div>
+    <!-- End Footer -->
+
+<!-- Start JS -->
+<script src="js/jquery.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="fontawesome/js/all.min.js"></script>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Start related course slide -->
+    <script>
+        $(document).ready(function () {            
+            $(".customer-logos").slick({
+                 slidesToShow: 2,
+                 slidesToScroll: 1,
+                 autoplay: true,
+                 autoplaySpeed: 5000,
+                 arrows: false,
+                 dots: false,
+                 pauseOnHover: false,
+                 responsive: [
+                 { breakpoint: 576, settings: { slidesToShow: 1 } },
+                 { breakpoint: 758, settings: { slidesToShow: 1 } },
+                 { breakpoint: 992, settings: { slidesToShow: 2 } },
+                 { breakpoint: 1200, settings: { slidesToShow: 3 } },
+                 ]
+            });           
+        });
+    </script> 
+</body>
+</html>

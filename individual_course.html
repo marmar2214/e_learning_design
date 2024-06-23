@@ -1,0 +1,434 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopOne Training School</title>
+    <link rel="icon" href="images/logo.jpg">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        body {
+            font-size: 13px !important;
+        }
+
+        /* logo size for logo */
+        @media (max-width: 767px) {
+            .logo {
+                width: 100px !important;
+                margin-left: 10px;
+            }
+        }
+
+        .courseTitle{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start Nav-->
+    <header id="header" class="headerShadow d-flex sticky-top">
+        <div class="container container-xl position-relative mb-1">
+          <div class="row">
+            <!-- logo Start -->
+            <div class="col-lg-4 col-md-6 col-4 text-center pt-3 pt-md-2">
+                <a href="index.html" class="">
+                    <img src="images/logo.jpg" class="img-fluid logo w-25" alt="...">
+                </a> 
+                <h5 class="titleColor ms-3 d-none d-sm-none d-md-inline">TopOne Training School</h5>            
+            </div>     
+
+            <!-- TopNav Start-->
+            <div class="col-lg-6 d-none d-lg-block">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary float-end">
+                    <div class="container-fluid">                      
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                          <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="course.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Course
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="course.html">Basic</a></li>
+                              <li><a class="dropdown-item" href="course.html">Intermediate</a></li>
+                              <li><a class="dropdown-item" href="course.html">Advanced</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">
+                                <i class="fa-solid fa-user titleColor ms-5"></i> Login
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fa-solid fa-address-card titleColor ms-2"></i> Register
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                </nav>    
+            </div>         
+
+            <!-- Start humberger menu -->            
+            <div class="col-lg-2 col-md-2 col-6 ms-auto order-2 order-lg-4">
+                <nav class="navbar bg-body-tertiary float-end">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="about.html">About</a>
+                                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="course.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Courses
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="individual_course.html">Basic</a></li>
+                                            <li><a class="dropdown-item" href="individual_course.html">Intermediate</a></li>
+                                            <li><a class="dropdown-item" href="individual_course.html">Advanced</a></li>                      
+                                        </ul>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-user titleColor pe-1"></i>Login</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><i class="fa-solid fa-address-card titleColor pe-1"></i>Register</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+             <!-- Logo icon in mobile view -->
+            <div class="col-2 d-lg-none d-md-block order-3">
+                <i class="fa-solid fa-user text-primary pt-4"></i>
+            </div>
+
+          </div> 
+        </div>           
+    </header>
+    <!-- End nav -->
+
+<!-- Start Main Section here We will change the code --> 
+    <!-- start popular course -->
+    <div class="container my-5">
+        <h2 class="titleColor courseTitle mb-5">TopOne Language School's Courses</h2>
+        <div class="card bg-body-secondary py-3 px-3">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+                <div class="col mb-3 course_hover py-3 px-4">
+                    <div class="card course_image shadow">
+                        <a href="" class="course_hover">
+                            <img src="images/course1.jpg" alt="" class="img-fluid w-100">
+                        </a>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <div>
+                                    <h6 class="d-inline d-md-block d-lg-inline titleColor me-5">Basic Starter</h6>
+                                </div>
+                                <div class="text-secondary mt-1 d-md-block">
+                                    <span class="me-3 d-sm-inline d-md-block d-lg-inline">
+                                        <i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                    <span class="me-3 d-block d-lg-inline">
+                                        <i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 10
+                                    </span>
+                                    <span class="d-block d-lg-inline">
+                                        <i class="fa-solid fa-clock titleColor pe-1"></i> 104hr 30min
+                                    </span>
+                                </div>
+                                <div>
+                                    <p class="course-price">Fees: 50000 MMK</p>
+                                </div> 
+                                <div class="">
+                                    <a href="courseDetail.html" class="btn btn-outline-primary btn-sm mt-2 me-2">Detail</a>
+                                    <a href="my_course.html" class="btn btn-outline-primary btn-sm mt-2">Enroll</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3 course_hover py-3 px-4">
+                    <div class="card course_image shadow">
+                        <a href="" class="course_hover">
+                            <div class="w-100">
+                                <img src="images/course2.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <div>
+                                    <h6 class="d-inline d-md-block d-lg-inline titleColor me-5">Intermediate</h6>
+                                </div>
+                                <div class="text-secondary mt-1 d-md-block">
+                                    <span class="me-3 d-sm-inline d-md-block d-lg-inline">
+                                        <i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                    <span class="me-3 d-block d-lg-inline">
+                                        <i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 10
+                                    </span>
+                                    <span class="d-block d-lg-inline">
+                                        <i class="fa-solid fa-clock titleColor pe-1"></i> 104hr 30min
+                                    </span>
+                                </div>
+                                <div>
+                                    <p class="course-price">Fees: 50000 MMK</p>
+                                </div> 
+                                <div class="">
+                                    <a href="courseDetail.html" class="btn btn-outline-primary btn-sm mt-2 me-2">Detail</a>
+                                    <a href="my_course.html" class="btn btn-outline-primary btn-sm mt-2">Enroll</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3 course_hover py-3 px-4">
+                    <div class="card course_image shadow">
+                        <a href="" class="course_hover">
+                            <div class="w-100">
+                                <img src="images/course3.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <div>
+                                    <h6 class="d-inline d-md-block d-lg-inline titleColor me-5">Advanced</h6>
+                                </div>
+                                <div class="text-secondary mt-1 d-md-block">
+                                    <span class="me-3 d-sm-inline d-md-block d-lg-inline">
+                                        <i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                    <span class="me-3 d-block d-lg-inline">
+                                        <i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 10
+                                    </span>
+                                    <span class="d-block d-lg-inline">
+                                        <i class="fa-solid fa-clock titleColor pe-1"></i> 104hr 30min
+                                    </span>
+                                </div>
+                                <div>
+                                    <p class="course-price">Fees: 50000 MMK</p>
+                                </div> 
+                                <div class="">
+                                    <a href="courseDetail.html" class="btn btn-outline-primary btn-sm mt-2 me-2">Detail</a>
+                                    <a href="my_course.html" class="btn btn-outline-primary btn-sm mt-2">Enroll</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 course_card" id="seemore">
+                <div class="col mb-3 course_hover py-3 px-4 d-none">
+                    <div class="card course_image shadow">
+                        <a href="" class="course_hover">
+                            <img src="images/course1.jpg" alt="" class="img-fluid w-100">
+                        </a>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <div>
+                                    <h6 class="d-inline d-md-block d-lg-inline titleColor me-5">Basic Starter</h6>
+                                </div>
+                                <div class="text-secondary mt-1 d-md-block">
+                                    <span class="me-3 d-sm-inline d-md-block d-lg-inline">
+                                        <i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                    <span class="me-3 d-block d-lg-inline">
+                                        <i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 10
+                                    </span>
+                                    <span class="d-block d-lg-inline">
+                                        <i class="fa-solid fa-clock titleColor pe-1"></i> 104hr 30min
+                                    </span>
+                                </div>
+                                <div>
+                                    <p class="course-price">Fees: 50000 MMK</p>
+                                </div> 
+                                <div class="">
+                                    <a href="courseDetail.html" class="btn btn-outline-primary btn-sm mt-2 me-2">Detail</a>
+                                    <a href="my_course.html" class="btn btn-outline-primary btn-sm mt-2">Enroll</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3 course_hover py-3 px-4 d-none">
+                    <div class="card course_image shadow">
+                        <a href="" class="course_hover">
+                            <div class="w-100">
+                                <img src="images/course2.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <div>
+                                    <h6 class="d-inline d-md-block d-lg-inline titleColor me-5">Intermediate</h6>
+                                </div>
+                                <div class="text-secondary mt-1 d-md-block">
+                                    <span class="me-3 d-sm-inline d-md-block d-lg-inline">
+                                        <i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                    <span class="me-3 d-block d-lg-inline">
+                                        <i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 10
+                                    </span>
+                                    <span class="d-block d-lg-inline">
+                                        <i class="fa-solid fa-clock titleColor pe-1"></i> 104hr 30min
+                                    </span>
+                                </div>
+                                <div>
+                                    <p class="course-price">Fees: 50000 MMK</p>
+                                </div> 
+                                <div class="">
+                                    <a href="courseDetail.html" class="btn btn-outline-primary btn-sm mt-2 me-2">Detail</a>
+                                    <a href="my_course.html" class="btn btn-outline-primary btn-sm mt-2">Enroll</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-3 course_hover py-3 px-4 d-none">
+                    <div class="card course_image shadow">
+                        <a href="" class="course_hover">
+                            <div class="w-100">
+                                <img src="images/course3.jpg" alt="" class="img-fluid">
+                            </div>
+                        </a>
+                        <div class="card-body">
+                            <div class="card-text">
+                                <div>
+                                    <h6 class="d-inline d-md-block d-lg-inline titleColor me-5">Advanced</h6>
+                                </div>
+                                <div class="text-secondary mt-1 d-md-block">
+                                    <span class="me-3 d-sm-inline d-md-block d-lg-inline">
+                                        <i class="fa-solid fa-book titleColor pe-1"></i> Chapter: 3</span>
+                                    <span class="me-3 d-block d-lg-inline">
+                                        <i class="fa-solid fa-video titleColor pe-1"></i> Lesson: 10
+                                    </span>
+                                    <span class="d-block d-lg-inline">
+                                        <i class="fa-solid fa-clock titleColor pe-1"></i> 104hr 30min
+                                    </span>
+                                </div>
+                                <div>
+                                    <p class="course-price">Fees: 50000 MMK</p>
+                                </div> 
+                                <div class="">
+                                    <a href="courseDetail.html" class="btn btn-outline-primary btn-sm mt-2 me-2">Detail</a>
+                                    <a href="my_course.html" class="btn btn-outline-primary btn-sm mt-2">Enroll</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button id="toggle" class="btn btn-primary btn-md ms-2 px-5">Show More Courses</button>
+            </div>            
+        </div>        
+    </div>
+    <!-- end popular course -->
+
+    <!-- start recommend course -->
+    
+    <!-- end recommend course -->
+
+    <!-- start catrgories -->
+    <div class="container my-5">
+        <h4 class="titleColor">Categories</h4>
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-5 my-2 border border-primary-subtle rounded-3 text-center p-2">
+                <a href="" class="fs-5 text-decoration-none">Basic Grammer</a>
+            </div>
+            <div class="col-12 col-md-5 my-2 border border-primary-subtle rounded-3 text-center p-2">
+                <a href="" class="fs-5 text-decoration-none">Basic English</a>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-5 my-2 border border-primary-subtle rounded-3 text-center p-2">
+                <a href="" class="fs-5 text-decoration-none">Advanced Grammer</a>
+            </div>
+            <div class="col-12 col-md-5 my-2 border border-primary-subtle rounded-3 text-center p-2">
+                <a href="" class="fs-5 text-decoration-none">Advanced English</a>
+            </div>
+        </div>
+        <div class="row justify-content-between">
+            <div class="col-12 col-md-5 my-2 border border-primary-subtle rounded-3 text-center p-2">
+                <a href="" class="fs-5 text-decoration-none">Intermediate Grammer</a>
+            </div>
+            <div class="col-12 col-md-5 my-2 border border-primary-subtle rounded-3 text-center p-2">
+                <a href="" class="fs-5 text-decoration-none">Intermediate English</a>
+            </div>
+        </div>
+    </div>
+    <!-- end categories -->
+<!-- End Main section -->
+
+    <!-- Start footer -->
+    <div class="container-fluid bg-body-secondary px-4 px-md-5 pt-3 text-center">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col mb-3">
+                <span class="d-block d-lg-inline me-3"><i
+                        class="fa-solid fa-phone pe-2 titleColor"></i>09973791484</span>
+                <span class="d-block d-lg-inline"><i
+                        class="fa-solid fa-envelope pe-2 titleColor"></i>topone@gmail.com</span>
+            </div>
+            <div class="col mb-3">
+                <span class="text-center d-block d-md-inline">Copy right @2023-2024 by <span
+                        class="titleColor fw-bold">TopOne Language School</span>. </span>
+            </div>
+            <div class="col mb-3 titleColor">
+                <i class="fa-brands fa-square-facebook fa-xl me-3 ps-2"></i>
+                <i class="fa-brands fa-facebook-messenger fa-xl me-3"></i>
+                <i class="fa-brands fa-square-twitter fa-xl me-3"></i>
+                <i class="fa-brands fa-youtube fa-xl me-3"></i>
+                <i class="fa-brands fa-tiktok fa-xl me-3"></i>
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+
+    <!-- Start JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="fontawesome/js/all.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Start popular course slide -->
+    <script>
+        $(document).ready(function () {
+
+            $('#toggle').click(function () {
+                $('.course_card .col').removeClass('d-none');
+                $('.course_card').toggle('slow');
+            });
+
+            $('#togglebtn').click(function () {
+                $('.course_cardtwo .col').removeClass('d-none');
+                $('.course_cardtwo').toggle('slow');
+            });
+
+        });
+    </script>
+</body>
+
+</html>
